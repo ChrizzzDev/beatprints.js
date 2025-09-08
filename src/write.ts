@@ -76,7 +76,7 @@ export function fontPaths(weight: FontWeight): string[] {
         "NotoSansKR",
         "NotoSans",
     ].map(family =>
-        new URL(`./assets/templates/${family}/${family}-${weight}.ttf`, import.meta.url).pathname
+        new URL(`./assets/fonts/${family}/${family}-${weight}.ttf`, import.meta.url).pathname
     );
 
     return [...defaultFonts, ...shared.filter(p => p.includes(`-${weight}.ttf`))];
